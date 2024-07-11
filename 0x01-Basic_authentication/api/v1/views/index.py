@@ -33,3 +33,12 @@ def unauthorized() -> str:
         raise error
     """
     abort(401)
+
+
+@app_views.route('/forbidden', strict_slashes=False)
+def forbidden():
+    """GET /api/v1/forbidden
+    Return:
+        raise error 403
+    """
+    abort(403)
